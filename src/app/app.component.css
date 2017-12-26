@@ -1,0 +1,13 @@
+.content {
+  position: relative;
+  min-height: 100vh;
+  overflow-y: hidden;
+  background: #515151;
+  text-align: center;
+}
+
+.max-size-window {
+  display: block;
+  margin: auto;
+  max-width: 1200px;
+}

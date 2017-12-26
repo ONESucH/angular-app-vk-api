@@ -1,0 +1,32 @@
+<!--suppress ALL -->
+<button (click)="getUsers($event);">Получить</button>
+<div class="result">
+  <div class="shablon-user" *ngFor="let users of arr">
+    <div class="image">
+      <a href="#"><img *ngIf="users !== undefined" src={{users.photo_200}} alt="images"></a>
+    </div>
+    <div class="data-users">
+      <h3 *ngIf="users !== undefined">{{users.first_name}} {{users.last_name}}</h3>
+      <div class="user-information">
+        <div class="description">
+          <span>Online</span>
+          <span>Id</span>
+          <span>Страна</span>
+          <span>Id страны</span>
+          <span>Город</span>
+          <span>Id города</span>
+          <span>Пол</span>
+        </div>
+        <div class="user-description">
+          <span *ngIf="users !== undefined">{{users.online}}</span>
+          <span *ngIf="users !== undefined">{{users.id}}</span>
+          <span *ngIf="users.country !== undefined">{{users.country.title}}</span>
+          <span *ngIf="users.country !== undefined">{{users.country.id}}</span>
+          <span *ngIf="users.city !== undefined">{{users.city.title}}</span>
+          <span *ngIf="users.city !== undefined">{{users.city.id}}</span>
+          <span *ngIf="users !== undefined">{{users.sex}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
